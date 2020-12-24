@@ -27,6 +27,9 @@ db = SQLAlchemy(app)
 api = Api(app)
 api.prefix = '/api'
 
+from flasgger import Swagger
+swagger = Swagger(app)
+
 from endpoints.users.resource import UsersResource
 from endpoints.todos.resource import TodosResource
 
